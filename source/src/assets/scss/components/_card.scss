@@ -1,0 +1,9 @@
+.card-shadow {
+    border: 0;
+    box-shadow: rem(12px) rem(8px) rem(16px) $color-tertiary;
+}
+
+.card-icon {
+    margin-bottom: rem(16px);
+    fill: $color-primary;
+}

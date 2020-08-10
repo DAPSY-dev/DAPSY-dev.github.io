@@ -1,0 +1,14 @@
+.section {
+    padding-top: rem(24px);
+    padding-bottom: rem(24px);
+
+    @media (min-width: $screen-lg) {
+        padding-top: rem(50px);
+        padding-bottom: rem(50px);
+    }
+}
+
+.section-primary {
+    color: $color-white;
+    background-color: $color-primary;
+}

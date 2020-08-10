@@ -1,0 +1,5 @@
+.mb-5-lg {
+    @media (min-width: $screen-lg) {
+        margin-bottom: rem(48px);
+    }
+}

@@ -1,0 +1,85 @@
+<section class="section" id="contacts">
+    <div class="container">
+        <h2 class="h1 text-uppercase">Contacts</h2>
+        <div class="row">
+            <div class="col-lg">
+                <p><strong>Don’t be a stranger, just say hello.</strong></p>
+                <p class="mb-4">
+                    Feel free to get in touch with me.
+                    I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                </p>
+                <p class="text-secondary mb-5">
+                    <small>Need help?</small> <br />
+                    <a href="mailto:bboydapsy@gmail.com" class="link-dark">bboydapsy@gmail.com</a>
+                </p>
+            </div>
+            <div class="col-lg">
+                <form action="#" method="POST" class="needs-validation" novalidate>
+                    <fieldset>
+                        <legend class="h4 text-uppercase mb-3">Let's make it happen!</legend>
+                        <div class="row">
+                            <div class="col-md mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-lg form-control-primary"
+                                    id="name"
+                                    maxlength="255"
+                                    pattern="[A-Za-z\s]{1,255}"
+                                    required
+                                />
+                                <div class="valid-feedback">
+                                    <span>Looks good!</span>
+                                </div>
+                                <div class="invalid-feedback">
+                                    <span>Please enter your name.</span>
+                                </div>
+                            </div>
+                            <div class="col-md mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    class="form-control form-control-lg form-control-primary"
+                                    id="email"
+                                    maxlength="255"
+                                    required
+                                />
+                                <div class="valid-feedback">
+                                    <span>Looks good!</span>
+                                </div>
+                                <div class="invalid-feedback">
+                                    <span>Please enter a valid email address.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="msg" class="form-label">Message</label>
+                                <textarea
+                                    class="form-control form-control-lg form-control-primary"
+                                    id="msg"
+                                    rows="3"
+                                    maxlength="65535"
+                                    required
+                                ></textarea>
+                                <div class="valid-feedback">
+                                    <span>Looks good!</span>
+                                </div>
+                                <div class="invalid-feedback">
+                                    <span>Please enter a message.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <button type="submit" class="btn btn-dark btn-lg w-100">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
