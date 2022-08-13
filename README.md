@@ -1,4 +1,4 @@
-## Making the web DAPSY's way!
+# Making the web DAPSY's way!
 
 **DAPSY specializes in making things** for human people. He loves Front-End and bringing awesome web designs to life, but he also likes to dance and learn more about how the universe works.
 
