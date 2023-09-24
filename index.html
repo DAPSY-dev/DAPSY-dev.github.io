@@ -1,39 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!--
-       ____  _____ _____ _____ __ __       _
-      |    \|  _  |  _  |   __|  |  |___ _| |___ _ _
-      |  |  |     |   __|__   |_   _|___| . | -_| | |
-      |____/|__|__|__|  |_____| |_|     |___|___|\_/
-    -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
-    <meta property="og:title" content="DAPSY - Making the web awesome for everyone!">
-    <meta property="og:description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
-    <meta property="og:image" content="https://dapsy-dev.github.io/assets/img/og.png">
-    <meta property="og:url" content="https://dapsy-dev.github.io/">
-    <meta name="twitter:title" content="DAPSY - Making the web awesome for everyone!">
-    <meta name="twitter:description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
-    <meta name="twitter:image" content="https://dapsy-dev.github.io/og.png">
-    <title>DAPSY - Making the web awesome for everyone!</title>
-    <link rel="icon shortcut" href="./favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./de-reboot.css">
-    <style>
-      .wrapper {
-        margin-left: auto;
-        margin-right: auto;
-        width: 92%;
-        max-width: 1280px;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="wrapper">
-      <h1>DAPSY-dev</h1>
-      <p><strong>DAPSY specializes in making things</strong> for human people. He loves Front-End and bringing awesome web designs to life, but he also likes to dance and learn more about how the universe works.</p>
-    </section>
-  </body>
+<html lang="en" class="no-js" data-init="VhFix" data-id="htmlElement">
+    <head>
+        <title>DAPSY - Making the web awesome for everyone!</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
+        <meta property="og:title" content="DAPSY - Making the web awesome for everyone!">
+        <meta property="og:description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
+        <meta property="og:image" content="https://dapsy-dev.github.io/assets/images/og.png">
+        <meta property="og:url" content="https://dapsy-dev.github.io/">
+        <meta name="twitter:title" content="DAPSY - Making the web awesome for everyone!">
+        <meta name="twitter:description" content="DAPSY specializes in making things for human people. He loves Front-End and bringing awesome web designs to life.">
+        <meta name="twitter:image" content="https://dapsy-dev.github.io/assets/images/og.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon shortcut" href="data:image/png;base64,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" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        
+        <script>
+            document.documentElement.classList.remove("no-js");
+        </script>
+        
+      <script type="module" crossorigin src="/assets/0000-home.d532737f.js"></script>
+      <link rel="stylesheet" href="/assets/0000-home.aa74021e.css">
+    </head>
+    <body>
+        <div class="container">
+            
+<div class="snazzy-heading">
+    <div class="snazzy-heading__line text-blue">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-1" data-toggle-target="toggle-snazzy-heading-1">
+            DAPSY
+        </button>
+        <div class="popup popup--left popup--offset popup--blue" data-toggle-box="toggle-snazzy-heading-1">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text">Hi, I'm DAPSY!</p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-indigo">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-2" data-toggle-target="toggle-snazzy-heading-2">
+            PERSONAL
+        </button>
+        <div class="popup popup--right popup--offset popup--indigo" data-toggle-box="toggle-snazzy-heading-2">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text">
+                I love Front-End, <br>
+                dancing and learning <br>
+                how the universe works.
+            </p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-indigo">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-2-2" data-toggle-target="toggle-snazzy-heading-2">
+            DETAILS
+        </button>
+    </div>
+
+    <div class="snazzy-heading__line text-purple">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-3" data-toggle-target="toggle-snazzy-heading-3">
+            EMPLOYMENT
+        </button>
+        <div class="popup popup--left popup--offset popup--purple" data-toggle-box="toggle-snazzy-heading-3">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text"><strong>Triniks Digital</strong> <small>(Front-End Developer)</small></p>
+            <p class="popup__text"><strong>TINQIN</strong> <small>(Front-End Developer)</small></p>
+            <p class="popup__text"><strong>Studio X</strong> <small>(Front-End Developer)</small></p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-purple">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-3-2" data-toggle-target="toggle-snazzy-heading-3">
+            HISTORY
+        </button>
+    </div>
+
+    <div class="snazzy-heading__line text-pink">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-4" data-toggle-target="toggle-snazzy-heading-4">
+            EDUCATION
+        </button>
+        <div class="popup popup--right popup--offset popup--pink" data-toggle-box="toggle-snazzy-heading-4">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text"><strong>TU Gabrovo</strong> <br> <small>(Computer Systems and Technology)</small></p>
+            <p class="popup__text"><strong>PGEHT "prof. Asen Zlatarov"</strong> <br> <small>(Computers and Technology)</small></p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-red">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-5" data-toggle-target="toggle-snazzy-heading-5">
+            PERSONAL
+        </button>
+        <div class="popup popup--left popup--offset popup--red" data-toggle-box="toggle-snazzy-heading-5">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text">Passionate</p>
+            <p class="popup__text">Flexible</p>
+            <p class="popup__text">Team player</p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-red">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-5-2" data-toggle-target="toggle-snazzy-heading-5">
+            SKILLS
+        </button>
+    </div>
+
+    <div class="snazzy-heading__line text-orange">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-6" data-toggle-target="toggle-snazzy-heading-6">
+            TECHNICAL
+        </button>
+        <div class="popup popup--right popup--offset popup--orange" data-toggle-box="toggle-snazzy-heading-6">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text">HTML, CSS, JavaScript,</p>
+            <p class="popup__text">AJAX, Sass/SCSS, React JS,</p>
+            <p class="popup__text">Gulp.js, npm, Git</p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-orange">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-6-2" data-toggle-target="toggle-snazzy-heading-6">
+            SKILLS
+        </button>
+    </div>
+
+    <div class="snazzy-heading__line text-yellow">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-7" data-toggle-target="toggle-snazzy-heading-7">
+            GET IN
+        </button>
+        <div class="popup popup--left popup--offset popup--yellow" data-toggle-box="toggle-snazzy-heading-7">
+            <button type="button" class="popup__close" data-toggle-close>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" class="popup__close-icon">
+                    <rect x="2" y="6" width="6" height="80" rx="2.82843" transform="rotate(-45 2 6)" />
+                    <rect x="58" y="2" width="6" height="80" rx="2.82843" transform="rotate(45 58 2)" />
+                </svg>
+                <span class="visually-hidden">Close</span>
+            </button>
+            <p class="popup__text">
+                <a href="https://www.linkedin.com/in/dev-yordan-petrov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="snazzy-heading__line text-yellow">
+        <button type="button" class="snazzy-heading__button" data-init="Toggle" data-id="toggle-snazzy-heading-7-2" data-toggle-target="toggle-snazzy-heading-7">
+            TOUCH
+        </button>
+    </div>
+</div>
+
+        </div>
+    </body>
 </html>
