@@ -1,0 +1,46 @@
+<nav class="nav">
+  <div class="nav__toggle-wrapper">
+    <button
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-nav"
+      data-id="mainNav"
+      data-toggle-options="nav"
+      class="button-icon button-icon--outline js-toggle"
+    >
+      <load src="/src/partials/icons/list.html" />
+      <span class="visually-hidden">Toggle navigation</span>
+    </button>
+  </div>
+
+  <div id="main-nav" class="nav__popup">
+    <div class="nav__toggle-wrapper nav__toggle-wrapper--popup-close">
+      <button
+        type="button"
+        data-toggle-hide
+        class="button-icon button-icon--outline"
+      >
+        <load src="/src/partials/icons/x.html" />
+        <span class="visually-hidden">Close navigation</span>
+      </button>
+    </div>
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#home" data-toggle-hide class="nav__link">Home</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="#about" data-toggle-hide class="nav__link">About</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="#works" data-toggle-hide class="nav__link">Works</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="#contact" data-toggle-hide class="nav__link">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

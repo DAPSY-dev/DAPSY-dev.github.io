@@ -1,0 +1,53 @@
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media (min-width: 30rem /* 480px */) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: 40rem /* 640px */) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: 48rem /* 768px */) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: 64rem /* 1024px */) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width: 75rem /* 1200px */) {
+    @content;
+  }
+}
+
+@mixin screen-2xl {
+  @media (min-width: 90rem /* 1440px */) {
+    @content;
+  }
+}
+
+@mixin screen-3xl {
+  @media (min-width: 100rem /* 1600px */) {
+    @content;
+  }
+}

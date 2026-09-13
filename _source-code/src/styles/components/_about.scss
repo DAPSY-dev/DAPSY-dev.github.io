@@ -1,0 +1,71 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.about {
+  position: relative;
+
+  &__background {
+    --dd-picture-background-inset: auto;
+    --dd-picture-background-aspect-ratio: 3 / 2;
+    --dd-picture-background-image-object-position: 100% 100%;
+
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    inline-size: 100%;
+    max-inline-size: rem(640px);
+    opacity: 0.05;
+
+    @include screen-md {
+      translate: 0 -50%;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    gap: var(--dd-base-spacing-xl) var(--dd-base-spacing-3xl);
+    grid-template-columns: 100%;
+
+    @include screen-md {
+      grid-template-columns: rem(192px) 1fr rem(192px);
+    }
+
+    @include screen-lg {
+      grid-template-columns: rem(256px) 1fr rem(256px);
+    }
+  }
+
+  &__avatar {
+    align-self: start;
+    margin-inline: auto;
+    inline-size: 100%;
+    max-inline-size: rem(352px);
+  }
+
+  &__info {
+    position: relative;
+    padding-block-end: var(--dd-base-spacing-xl);
+
+    @include screen-md {
+      padding-block-end: 0;
+      padding-inline-end: var(--dd-base-spacing-xl);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-end: 0;
+      inline-size: 100%;
+      block-size: rem(2px);
+      background-image: var(--dd-base-gradient-200);
+
+      @include screen-md {
+        inset-block-start: 0;
+        inset-block-end: auto;
+        inline-size: rem(2px);
+        block-size: 100%;
+        background-image: var(--dd-base-gradient-300);
+      }
+    }
+  }
+}

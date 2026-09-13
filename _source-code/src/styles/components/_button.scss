@@ -1,0 +1,136 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.button-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: none;
+  border-radius: var(--dd-base-radius-full);
+  padding: 0;
+  inline-size: rem(40px);
+  block-size: rem(40px);
+  background-color: transparent;
+  font-size: var(--dd-base-font-size-md);
+  color: rgb(var(--dd-base-color-text));
+  text-decoration: none;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  @include screen-md {
+    inline-size: rem(48px);
+    block-size: rem(48px);
+  }
+
+  &--fill {
+    background-color: rgb(var(--dd-base-color-bg-surface-soft));
+    transition: background-color var(--dd-base-duration-fast);
+
+    @include reduce-motion {
+      transition: none;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: rgb(var(--dd-base-color-bg-surface));
+      }
+    }
+
+    &:active {
+      background-color: rgb(var(--dd-base-color-bg-dark));
+    }
+  }
+
+  &--outline {
+    border: rem(1px) solid rgb(var(--dd-base-color-white) / 0.1);
+    transition: background-color var(--dd-base-duration-fast);
+
+    @include reduce-motion {
+      transition: none;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: rgb(var(--dd-base-color-white) / 0.05);
+      }
+    }
+
+    &:active {
+      background-color: rgb(var(--dd-base-color-white) / 0.1);
+    }
+  }
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding-block: var(--dd-base-spacing-lg);
+  padding-inline: var(--dd-base-spacing-2xl);
+  gap: var(--dd-base-spacing-xl);
+  background-color: transparent;
+  font-size: var(--dd-base-font-size-sm);
+  letter-spacing: var(--dd-base-letter-spacing-sm);
+  color: rgb(var(--dd-base-color-text));
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &--fill {
+    border-radius: var(--dd-base-radius-full);
+    background-color: rgb(var(--dd-base-color-primary));
+    transition: background-color var(--dd-base-duration-fast);
+
+    @include reduce-motion {
+      transition: none;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: rgb(var(--dd-base-color-primary-bright));
+      }
+    }
+
+    &:active {
+      background-color: rgb(var(--dd-base-color-primary-soft));
+    }
+  }
+
+  &--outline {
+    border: rem(2px) solid rgb(var(--dd-base-color-primary) / 0.5);
+    border-radius: var(--dd-base-radius-md);
+    transition: border-color var(--dd-base-duration-fast);
+
+    @include reduce-motion {
+      transition: none;
+    }
+
+    @include hover {
+      &:hover {
+        border-color: rgb(var(--dd-base-color-primary-bright));
+      }
+    }
+
+    &:active {
+      border-color: rgb(var(--dd-base-color-primary-soft));
+    }
+  }
+
+  &--lg {
+    padding-block: var(--dd-base-spacing-xl);
+    padding-inline: var(--dd-base-spacing-3xl);
+
+    @include screen-md {
+      font-size: var(--dd-base-font-size-md);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--dd-base-spacing-lg);
+  font-family: var(--dd-base-font-family-secondary);
+  font-size: var(--dd-base-font-size-2xl);
+  font-weight: 300;
+  color: rgb(var(--dd-base-color-text));
+  letter-spacing: var(--dd-base-letter-spacing-xl);
+  text-decoration: none;
+
+  @include screen-md {
+    font-size: var(--dd-base-font-size-4xl);
+  }
+
+  & .icon {
+    translate: 0 rem(-2px);
+    color: rgb(var(--dd-base-color-primary));
+  }
+}

@@ -1,0 +1,28 @@
+<article class="card">
+  <picture class="picture" style="--dd-picture-aspect-ratio: 448 / 336">
+    <source srcset="{=$image}" type="{=$image-mime}" />
+    <img
+      src="{=$image-fallback}"
+      alt="{=$title}"
+      width="448"
+      height="336"
+      loading="lazy"
+      class="picture__image"
+    />
+  </picture>
+  <div class="card__body">
+    <div class="card__content">
+      <h3 class="card__title">{=$title}</h3>
+      <p class="card__text">{=$text}</p>
+    </div>
+    <a
+      href="{=$link}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="card__link"
+    >
+      <span class="visually-hidden">View work</span>
+      <load src="/src/partials/icons/box-arrow-up-right.html" />
+    </a>
+  </div>
+</article>

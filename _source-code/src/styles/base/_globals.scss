@@ -1,0 +1,67 @@
+@use "../abstracts/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(var(--dd-base-color-bg-dark));
+  font-family: var(--dd-base-font-family-primary);
+  font-optical-sizing: auto;
+  line-height: var(--dd-base-line-height-lg);
+  color: rgb(var(--dd-base-color-text));
+  tab-size: 4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include reduce-motion {
+    scroll-behavior: auto;
+  }
+}
+
+picture,
+img,
+svg,
+video,
+audio,
+canvas,
+iframe,
+embed,
+object {
+  display: block;
+  max-inline-size: 100%;
+}
+
+img,
+video {
+  block-size: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--dd-base-font-family-secondary);
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--dd-base-line-height-md);
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+progress {
+  accent-color: rgb(var(--dd-base-color-primary));
+}

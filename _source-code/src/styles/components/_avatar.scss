@@ -1,0 +1,31 @@
+@use "../abstracts/functions" as *;
+
+.avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: rem(1px) solid rgb(var(--dd-base-color-white) / 0.25);
+  border-radius: var(--dd-base-radius-full);
+  padding: var(--dd-base-spacing-lg);
+
+  &__picture {
+    flex-grow: 1;
+    border-radius: var(--dd-base-radius-full);
+    overflow: hidden;
+  }
+
+  & .icon {
+    position: absolute;
+    inset-block-start: 6%;
+    inset-inline-start: 0;
+    font-size: var(--dd-base-font-size-2xl);
+    color: rgb(var(--dd-base-color-primary));
+
+    &:nth-of-type(2) {
+      inset-block-start: auto;
+      inset-block-end: 6%;
+      rotate: 180deg;
+    }
+  }
+}

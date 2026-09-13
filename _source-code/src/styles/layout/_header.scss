@@ -1,0 +1,12 @@
+@use "../abstracts/functions" as *;
+
+.header {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--dd-base-spacing-xl);
+    gap: var(--dd-base-spacing-xl);
+  }
+}

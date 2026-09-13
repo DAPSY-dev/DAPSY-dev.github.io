@@ -1,0 +1,32 @@
+.description-list {
+  display: grid;
+  margin: 0;
+  gap: var(--dd-base-spacing-xl);
+  grid-template-columns: 100%;
+
+  // &__item {
+  // }
+
+  &--icons &__item {
+    position: relative;
+    padding-inline-start: var(--dd-base-spacing-4xl);
+  }
+
+  &__term {
+    font-size: var(--dd-base-font-size-xs);
+    color: rgb(var(--dd-base-color-primary));
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    font-size: var(--dd-base-font-size-2xl);
+  }
+
+  &__details {
+    margin: 0;
+    margin-block-start: var(--dd-base-spacing-sm);
+  }
+}

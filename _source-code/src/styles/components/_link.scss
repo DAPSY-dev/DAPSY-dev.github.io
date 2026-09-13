@@ -1,0 +1,35 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  gap: var(--dd-base-spacing-xl);
+  background-color: transparent;
+  color: rgb(var(--dd-base-color-text));
+  text-decoration: none;
+  transition: color var(--dd-base-duration-fast);
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  @include reduce-motion {
+    transition: none;
+  }
+
+  @include hover {
+    &:hover {
+      color: rgb(var(--dd-base-color-primary));
+    }
+  }
+
+  &:active {
+    color: rgb(var(--dd-base-color-primary-soft));
+  }
+}

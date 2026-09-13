@@ -1,0 +1,132 @@
+@use "../abstracts/functions" as *;
+
+:root {
+  // Colors
+  --dd-base-color-black: 0 0 0;
+  --dd-base-color-white: 255 255 255;
+
+  --dd-base-color-bg-dark: 13 18 37;
+  --dd-base-color-bg-deep: 9 14 29;
+  --dd-base-color-bg-surface: 21 27 50;
+  --dd-base-color-bg-surface-soft: 27 33 64;
+
+  --dd-base-color-text: 245 243 250;
+  --dd-base-color-text-muted: 183 181 200;
+  --dd-base-color-text-dim: 133 134 155;
+
+  --dd-base-color-primary: 233 121 166;
+  --dd-base-color-primary-bright: 241 140 183;
+  --dd-base-color-primary-soft: 214 111 156;
+
+  // Gradients
+  --dd-base-gradient-50: linear-gradient(
+    90deg,
+    rgb(var(--dd-base-color-bg-dark) / 0.75) 50%,
+    transparent
+  );
+  --dd-base-gradient-100: linear-gradient(
+    90deg,
+    rgb(var(--dd-base-color-bg-dark) / 0.75) 25%,
+    transparent 50%
+  );
+  --dd-base-gradient-200: linear-gradient(
+    90deg,
+    transparent,
+    rgb(var(--dd-base-color-white) / 0.25),
+    transparent
+  );
+  --dd-base-gradient-300: linear-gradient(
+    transparent,
+    rgb(var(--dd-base-color-white) / 0.25),
+    transparent
+  );
+  --dd-base-gradient-400: linear-gradient(
+    90deg,
+    rgb(var(--dd-base-color-bg-dark) / 0.75),
+    rgb(var(--dd-base-color-bg-dark) / 0.5)
+  );
+  --dd-base-gradient-500: linear-gradient(
+    90deg,
+    rgb(var(--dd-base-color-bg-dark) / 0.75),
+    transparent
+  );
+
+  // Typography
+  --dd-base-font-family-primary: "Inter", sans-serif;
+  --dd-base-font-family-secondary: "Manrope", sans-serif;
+
+  --dd-base-font-size-xs: #{rem(12px)};
+  --dd-base-font-size-sm: #{rem(14px)};
+  --dd-base-font-size-md: #{rem(16px)};
+  --dd-base-font-size-lg: #{rem(18px)};
+  --dd-base-font-size-xl: #{rem(20px)};
+  --dd-base-font-size-2xl: #{rem(24px)};
+  --dd-base-font-size-3xl: #{rem(28px)};
+  --dd-base-font-size-4xl: #{rem(32px)};
+  --dd-base-font-size-5xl: #{rem(36px)};
+  --dd-base-font-size-6xl: #{rem(40px)};
+  --dd-base-font-size-7xl: #{rem(48px)};
+  --dd-base-font-size-8xl: #{rem(56px)};
+  --dd-base-font-size-9xl: #{rem(64px)};
+
+  --dd-base-letter-spacing-xs: 0.05em;
+  --dd-base-letter-spacing-sm: 0.1em;
+  --dd-base-letter-spacing-md: 0.15em;
+  --dd-base-letter-spacing-lg: 0.2em;
+  --dd-base-letter-spacing-xl: 0.25em;
+
+  --dd-base-line-height-xs: 1;
+  --dd-base-line-height-sm: 1.125;
+  --dd-base-line-height-md: 1.25;
+  --dd-base-line-height-lg: 1.5;
+  --dd-base-line-height-xl: 1.75;
+
+  // Spacing
+  --dd-base-spacing-xs: #{rem(2px)};
+  --dd-base-spacing-sm: #{rem(4px)};
+  --dd-base-spacing-md: #{rem(8px)};
+  --dd-base-spacing-lg: #{rem(12px)};
+  --dd-base-spacing-xl: #{rem(16px)};
+  --dd-base-spacing-2xl: #{rem(24px)};
+  --dd-base-spacing-3xl: #{rem(32px)};
+  --dd-base-spacing-4xl: #{rem(40px)};
+  --dd-base-spacing-5xl: #{rem(48px)};
+  --dd-base-spacing-6xl: #{rem(56px)};
+  --dd-base-spacing-7xl: #{rem(64px)};
+  --dd-base-spacing-8xl: #{rem(72px)};
+  --dd-base-spacing-9xl: #{rem(80px)};
+
+  // Containers
+  --dd-base-container-xs: #{rem(480px)};
+  --dd-base-container-sm: #{rem(640px)};
+  --dd-base-container-md: #{rem(768px)};
+  --dd-base-container-lg: #{rem(1024px)};
+  --dd-base-container-xl: #{rem(1200px)};
+
+  // Border Radius
+  --dd-base-radius-xs: #{rem(2px)};
+  --dd-base-radius-sm: #{rem(4px)};
+  --dd-base-radius-md: #{rem(8px)};
+  --dd-base-radius-lg: #{rem(12px)};
+  --dd-base-radius-xl: #{rem(16px)};
+  --dd-base-radius-2xl: #{rem(24px)};
+  --dd-base-radius-3xl: #{rem(32px)};
+  --dd-base-radius-4xl: #{rem(40px)};
+  --dd-base-radius-5xl: #{rem(48px)};
+  --dd-base-radius-6xl: #{rem(56px)};
+  --dd-base-radius-7xl: #{rem(64px)};
+  --dd-base-radius-8xl: #{rem(72px)};
+  --dd-base-radius-9xl: #{rem(80px)};
+  --dd-base-radius-full: 9999px;
+
+  // Z-Index
+  --dd-base-layer-sticky: 100;
+  --dd-base-layer-floating: 200;
+  --dd-base-layer-overlay: 300;
+  --dd-base-layer-topmost: 900;
+
+  // Durations
+  --dd-base-duration-fast: 150ms;
+  --dd-base-duration-normal: 250ms;
+  --dd-base-duration-slow: 400ms;
+}

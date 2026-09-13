@@ -1,0 +1,28 @@
+@use "../abstracts/mixins" as *;
+
+.wrapper {
+  --dd-wrapper-spacing: var(--dd-base-spacing-xl);
+  --dd-wrapper-size: var(--dd-base-container-xl);
+
+  margin-inline: auto;
+  inline-size: min(
+    100% - 2 * var(--dd-wrapper-spacing),
+    var(--dd-wrapper-size)
+  );
+
+  @include screen-md {
+    --dd-wrapper-spacing: var(--dd-base-spacing-3xl);
+  }
+
+  &--size-lg {
+    --dd-wrapper-size: var(--dd-base-container-lg);
+  }
+
+  &--size-xs-lg {
+    --dd-wrapper-size: var(--dd-base-container-xs);
+
+    @include screen-md {
+      --dd-wrapper-size: var(--dd-base-container-lg);
+    }
+  }
+}

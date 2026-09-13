@@ -1,0 +1,8 @@
+@use "../abstracts/functions" as *;
+
+.skip-link {
+  position: fixed;
+  z-index: var(--dd-base-layer-topmost);
+  inset-block-start: var(--dd-base-spacing-lg);
+  inset-inline-start: var(--dd-base-spacing-lg);
+}

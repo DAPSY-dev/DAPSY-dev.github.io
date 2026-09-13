@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as *;
+
+.works {
+  &__inner {
+    display: grid;
+    gap: var(--dd-base-spacing-3xl);
+    grid-template-columns: 100%;
+  }
+
+  &__heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cards {
+    display: grid;
+    gap: var(--dd-base-spacing-xl);
+    grid-template-columns: 100%;
+
+    @include screen-xs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-md {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__cta {
+    text-align: center;
+  }
+}

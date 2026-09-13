@@ -1,0 +1,39 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.heading {
+  margin: 0;
+  font-family: var(--dd-base-font-family-secondary);
+  font-size: var(--dd-base-font-size-3xl);
+  font-weight: 400;
+  line-height: var(--dd-base-line-height-md);
+
+  @include screen-md {
+    font-size: var(--dd-base-font-size-5xl);
+  }
+
+  &--accent {
+    &::after {
+      content: "";
+      display: block;
+      margin-block-start: var(--dd-base-spacing-xl);
+      border-radius: var(--dd-base-radius-full);
+      inline-size: rem(64px);
+      block-size: rem(2px);
+      background-color: rgb(var(--dd-base-color-primary));
+    }
+  }
+
+  &--xl {
+    font-size: var(--dd-base-font-size-7xl);
+    font-weight: 700;
+
+    @include screen-md {
+      font-size: var(--dd-base-font-size-9xl);
+    }
+  }
+
+  &__accent {
+    color: rgb(var(--dd-base-color-primary));
+  }
+}

@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as *;
+
+.main {
+  display: grid;
+  gap: var(--dd-base-spacing-3xl);
+  grid-template-columns: 100%;
+
+  @include screen-md {
+    gap: var(--dd-base-spacing-7xl);
+  }
+}

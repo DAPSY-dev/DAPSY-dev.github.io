@@ -1,0 +1,124 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.nav {
+  &__toggle-wrapper {
+    @include screen-md {
+      display: none;
+    }
+
+    &--popup-close {
+      margin-block-start: var(--dd-base-spacing-xl);
+      margin-inline-start: auto;
+      text-align: end;
+    }
+  }
+
+  &__popup {
+    display: none;
+    position: fixed;
+    z-index: var(--dd-base-layer-overlay);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    padding-inline: var(--dd-base-spacing-xl);
+    inline-size: 100%;
+    block-size: 0;
+    overflow: auto;
+    background-color: rgb(var(--dd-base-color-bg-dark));
+    color: currentColor;
+    transition:
+      display var(--dd-base-duration-normal) allow-discrete,
+      block-size var(--dd-base-duration-normal);
+
+    @include reduce-motion {
+      transition: none;
+    }
+
+    &.is-showing {
+      display: block;
+      block-size: 100%;
+    }
+
+    @starting-style {
+      &.is-showing {
+        block-size: 0;
+      }
+    }
+
+    @include screen-md {
+      position: static;
+      inset-block-start: auto;
+      inset-inline-start: auto;
+      display: block;
+      padding: 0;
+      inline-size: auto;
+      block-size: auto;
+      background-color: transparent;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    column-gap: var(--dd-base-spacing-5xl);
+  }
+
+  &__item {
+    flex-basis: 100%;
+    display: block;
+
+    @include screen-md {
+      flex-basis: auto;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-block: var(--dd-base-spacing-lg);
+    color: rgb(var(--dd-base-color-text));
+    letter-spacing: var(--dd-base-letter-spacing-sm);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include screen-md {
+      text-align: start;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      border-radius: var(--dd-base-radius-full);
+      inline-size: 100%;
+      block-size: rem(2px);
+      background-color: rgb(var(--dd-base-color-primary));
+      scale: 0 1;
+      transition: scale var(--dd-base-duration-fast);
+
+      @include reduce-motion {
+        transition: none;
+      }
+    }
+
+    @include hover {
+      &:hover {
+        &::after {
+          scale: 1 1;
+        }
+      }
+    }
+
+    &:active {
+      &::after {
+        scale: 0.9 1;
+      }
+    }
+  }
+}

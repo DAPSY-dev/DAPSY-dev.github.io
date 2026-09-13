@@ -1,0 +1,33 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  &__inner {
+    display: grid;
+    align-items: center;
+    padding-block: var(--dd-base-spacing-md);
+    gap: var(--dd-base-spacing-xl);
+    grid-template-columns: 1fr rem(48px);
+
+    @include screen-md {
+      grid-template-columns: rem(48px) 1fr rem(48px);
+
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    color: rgb(var(--dd-base-color-text-dim));
+
+    @include screen-md {
+      text-align: center;
+    }
+
+    & .icon {
+      translate: 0 rem(2px);
+    }
+  }
+}
